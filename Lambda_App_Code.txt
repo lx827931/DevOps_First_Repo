@@ -1,0 +1,224 @@
+def lambda_handler(event, context):
+    
+    # TODO implement
+    body='''
+    <!DOCTYPE html>
+    <html>
+    <head>
+
+
+    <script language="javascript">
+        name=prompt("Your name please ? ")
+        alert("Thanks "+name+" Now you are redirecting to the website")
+    </script>      
+    <style type="text/css">
+     
+      .heading{
+            color: green;
+            position: absolute;
+            top: 22px;
+            cursor: pointer;
+            text-transform: uppercase;
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            text-decoration: none;
+
+
+            
+      }
+      .heading::after{
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: green;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s;
+      }
+      .heading:hover::after{
+            width: 100%;
+
+      }
+      .main{
+            background-color: black;
+            position: absolute;
+            top: 1px;
+            width: 99%;
+
+      }
+      .para{
+            position: relative;
+            top: 110px;
+            font-family: bold;
+            font-size: 30px;
+            border: 5px solid whitesmoke;
+            border-radius: 200px;
+            border-width: 5px;
+            border-block-color: black;
+            background: linear-gradient(pink,green,yellow);
+            border-style: solid;
+            border-bottom-style: ridge;
+
+
+      }
+      @keyframes anione
+      {
+            from{
+                  color: azure;
+                  font-size: 60px;
+            }
+            to{
+                  color: black;
+                  font-size: 30px;
+            }
+      }
+      div{
+            animation-name: anione;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+      }
+      .logo{
+            position: absolute;
+            left: 20px;
+            top: 8px;
+            
+            
+
+      }
+      .fb{
+            color: green;
+            font-size: 25px;
+            position: absolute;
+            top: 70%;
+            left: 12%;
+            text-decoration: none;
+            text-transform: none;
+      }
+      .you{
+            color: green;
+            font-size: 25px;
+            position: absolute;
+            top: 70%;
+            left: 34%;
+            text-decoration: none;
+            text-transform: none;
+      }
+      .linked{
+            color: green;
+            font-size: 25px;
+            position: absolute;
+            top: 70%;
+            left: 59%;
+            text-decoration: none;
+            text-transform: none;
+      }
+      .insta{
+            color: green;
+            font-size: 25px;
+            position: absolute;
+            top: 70%;
+            left: 84%;
+            text-decoration: none;
+            text-transform: none;
+     }
+      .ins{
+            position: absolute;
+            top: 86%;
+            left: 67%;
+      }
+      
+      
+      </style>
+
+    </head>
+    <header>
+`   <div class="main">
+    <font size="5" color="#fff" class="logo">
+        <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-web-search-icon-png-image_4140340.jpg" width="90" height="80" vspace="4"></img>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+         
+    
+          
+          <a href="#" class="heading">Home</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="Aboutme.html" class="heading">About</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;
+          &nbsp;&nbsp;
+    
+             &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+    
+          <a href="myskills.html" class="heading">Skills</a>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;
+          &nbsp;&nbsp;
+    
+           
+          &nbsp;&nbsp;
+          &nbsp;&nbsp;
+          <a href="mygallery.html" class="heading" >Gallery</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;
+             &nbsp;
+         
+    
+                
+          <a href="contact.html" class="heading">Contact</a>
+    </div>
+    </header>
+    </span>
+    </font>
+    
+    <div class="para">
+    
+    <center>
+    <p><span>
+    <h3  >Welcome to my website</h3>
+    
+    <h4  >I'm Tejvir singh<br>
+    Python & Web developer</h4>
+    </p></span>
+    </center>
+    </div>
+    <div class="footer">
+    <a href="http://www.fb.com" class="fb">facebook</a>
+    
+    <a href="https://www.youtube.com/channel/UCwuEg2m_D8X0MHkjrzkLl-w" class="you">Youtube</a>
+    <a href="https://in.linkedin.com/" class="linked">Linked in</a>
+    <a href="https://www.instagram.com/" class="insta">Instagram</a>
+    </body>
+    </div>
+    
+    </html>'''
+    response = {
+        'statusCode': 200,
+        'headers' : {"Content-Type" : "text/html",},
+        'body': body
+    }
+    return response
